@@ -132,70 +132,74 @@ GenerateClassCluster=0
 DocumentUniqueId=AXMOJPKP
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for TriMod Adapter 2\Design Rule Check - TriMod Adapter 2.html
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\Bill of Materials-TriMod Adapter 2.xlsx
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.DRR
+DocumentPath=Project Outputs for TriMod Adapter 2\Design Rule Check - TriMod Adapter 2.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.EXTREP
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBL
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBO
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBP
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBS
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GKO
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GM1
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTL
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTO
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTP
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTS
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.LDP
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.REP
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.RUL
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.REP
 DItemRevisionGUID=
 
 [GeneratedDocument17]
+DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument18]
 DocumentPath=Project Outputs for TriMod Adapter 2\Gerber\TriMod Adapter 2.TXT
 DItemRevisionGUID=
 
@@ -213,7 +217,7 @@ Value=Projektname
 
 [Parameter4]
 Name=Version
-Value=1.0
+Value=1.1
 
 [Configuration1]
 Name=Sources
