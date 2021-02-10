@@ -1,5 +1,7 @@
 # TriMod 2.0 Adapter
 
+![](https://github.com/DL2DW/TriMod_2.0_Adapter/blob/main/Images/TriMod_Adapter_2.0.jpg)
+
 
 
 ## Introduction
@@ -18,25 +20,21 @@ The first version of the TriMod adapter was still discretely built with TTL devi
 
 With the TriMod adapter 2.0, I have replaced the TTL components with a CPLD, as well as the possibility to be able to use SpeedDOS, etc. again.
 
-The TriMod Adapter 2.0 is as far as I know the first working adapter, which is not only based on a CPLD, but also offers a parallel cable connection for floppy speeder.
+To the best of my knowledge, the TriMod Adapter 2.0 was not only the first working adapter based on a CPLD but also the first to offer a parallel cable connection for floppy speeders.
+
+![](https://github.com/DL2DW/TriMod_2.0_Adapter/blob/main/Images/TriMod_Adapter_2.0_complete_view.jpg)
+
+
+
+![](https://github.com/DL2DW/TriMod_2.0_Adapter/blob/main/Images/TriMod_Adapter_2.0_top_view.jpg)
+
+
 
 ## Background information
 
 I had created a replica of the motherboard of the Commodore Floppy 1541 in early 2019. This I had done because I had some drives where the board was no longer in good condition, partly hairline cracks and also many traces had to be repaired by hand.
 
 So I had sat down, and rummaged through many circuit diagrams (There is unfortunately not a single correct circuit diagram that has no errors) and measured many connections. So the first version was created in spring 2019.
-
-![](https://github.com/DL2DW/TriMod_2.0_Adapter/blob/main/Images/first_replica_1541.jpg)
-
-
-
-At the same time I was developing my first TriMod adapter. At some point I got the idea to combine the whole thing. 
-
-I now had a working schematic of the 1541 in electronic form. So I decided to "pimp" the circuit board of the 1541 a bit.
-
-In the course of development, I then also encountered the problem that the board naturally became larger and larger. Not that there wasn't enough space in the 1541, but the price that was called for the production shot up more and more.
-
-So the thought was to pack the whole thing into a CPLD. 
 
 At the same time I was developing my first TriMod adapter. At some point I got the idea to combine the whole thing. 
 
@@ -51,12 +49,6 @@ So that I did not always have to make a large mainboard in case of error, I firs
 Thus, the first TriMod 2.0 adapter was created in the fall of 2019.
 
 ![](https://github.com/DL2DW/TriMod_2.0_Adapter/blob/main/Images/TriMod_Adapter_CPLD_Version.jpg)
-
-
-
-This adapter then went into a new motherboard in early 2020. In this mainboard I have already packed a large part of the TTL logic into a CPLD, as well as a switchable IEEE-488 and "SpeedDOS" interface integrated.
-
-![](https://github.com/DL2DW/TriMod_2.0_Adapter/blob/main/Images/1541_ptototyp3_mark6.jpg)
 
 
 
@@ -76,9 +68,9 @@ And unfortunately the last two components are too big to fit underneath a DIP-40
 
 Furthermore I didn't want to use SMD pin headers, because many people have problems soldering them. In addition I find these also somewhat expensive in the version with turned precision pins.
 
-So I decided not to use the VIA port device, which is replaced by the adapter, but to use the SMD version of WDC in form of the W65C22N. 
+I therefore kept everything as compact as possible and placed the components quite close to each other.
 
-So I could already save some space. Then I replaced the standard IDC headers with MicroMatch connectors. They are a bit smaller, but use the same ribbon cable. 
+Then I replaced the standard IDC headers with MicroMatch connectors. They are a bit smaller, but use the same ribbon cable. 
 
 And so the new TriMod 2.0 adapter was created. 
 
@@ -87,13 +79,48 @@ And so the new TriMod 2.0 adapter was created.
 ## Features
 
 - 3 interfaces - CBM bus, connection for parallel cable and IEEE-488
+
 - Switchable between CBM bus, incl. parallel cable and IEEE-488
+
 - Set Device ID is the same for both modes
+
 - When switching or changing the Device ID, a reset of the floppy is automatically executed
-- All lines can always remain connected. If e.g. IEEE-488 is activated, the CBM bus is not disturbed or blocked by this.
+
+- If the floppy is in IEEE-488 mode, the CBM bus cable can still remain connected without disturbing other CBM bus devices. Practical if for example a printer is also connected to the bus. If you then switch to IEEE-488 mode, nothing needs to be changed in the cabling. The floppy is addressed via IEEE-488, while the printer is addressed via the CBM bus.
+
 - Automatic Kernal switching
-- Alternative Kernal possible. In both modes it is possible to switch to another kernel.
+
+- Alternative Kernal possible. In both modes it is possible to switch to another kernel (Is not yet enabled) in the current firmware).
+
 - LEDs for status display
+
+  
+
+# Firmware flashing
+
+To upload the firmware, I have provided a 6-pin header (on the back of the board, the pins are labeled accordingly).
+
+The easiest way to do this is with the tool xc3sprog and a FTDI FT232H adapter. You can get this adapter from China for about $7. Here in Germany this adapter costs about 15,- Euro.
+
+A very well described tutorial how to connect the adapter and flash the JED file with xc3sprog can be found at https://github.com/1c3d1v3r/neatPLA/tree/master/programming.
+
+The pin assignment is as follows:
+
+![](https://github.com/DL2DW/TriMod_2.0_Adapter/blob/main/Images/TriMod_Adapter_2.0_pin_header.jpg)
+
+The pins for Kernal 2, or 2nd Kernal are currently not active. I have provided them in case you need another Kernal in both modes. For example once SpeedDOS and once Original to switch. 
+
+The lower pin header is double rowed, the right side is always GND. So if necessary jumpers can be plugged to switch the mode or to change the device ID.
+
+Attention: As soon as you change the device ID or the mode, the 1541 is automatically reset. So this should not be done while the floppy is still writing.
+
+Kernal 1 is simply connected to a 2564 Kernal adapter. The signal is LOW when in CBM bus mode and HIGH in GPIB (IEEE-488) mode.
+
+To switch on the IEEE-488 mode, just connect the "Mode" pin to GND or set a jumper at the corresponding position.
+
+The device switching is as usual. For Device 8 both jumpers must be closed or both pins must be connected to GND. 
+
+I have planned to be able to request also the solder jumpers present on the 1541. This is currently not activated, because I personally find these solder jumpers very impractical. However, if this is desired, this can also still be activated in the firmware.
 
 
 
