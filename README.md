@@ -150,13 +150,23 @@ Here is the list of components.
 | 1        | U3                                         | Texas  Instruments | SN75161BDWR               | TEXAS  INSTRUMENTS     SN75161BDWR                           |
 | 1        | U4                                         | Xilinx             | XC95144XL-10TQ100C        | IC  CPLD 144MC 7.5NS 100TQFP                                 |
 
+
+
+## PCB
+
+The PCB can either be ordered directly from [PCBWay](https://www.pcbway.com/project/shareproject/TriMod_2_0_Adapter.html), or you can create it yourself from the Gerber files available here.
+
+[![PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/TriMod_2_0_Adapter.html)
+
+
+
 If you liked my project, I would be very happy about a small coffee donation.
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R62T6RN)
 
 
 
-# License
+## License
 
 The contents of this repository, with the exception of the Docs and Software directories, are released under the following license:
 
